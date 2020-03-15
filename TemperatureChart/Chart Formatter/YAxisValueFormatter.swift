@@ -10,7 +10,6 @@ import Foundation
 import Charts
 
 class YAxisValueFormatter: NSObject, IAxisValueFormatter {
-
     let numFormatter: NumberFormatter
 
     override init() {

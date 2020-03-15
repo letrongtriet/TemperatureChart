@@ -63,8 +63,11 @@ class ChartViewController: UIViewController {
     
     private func updateView(with newView: UIView) {
         containerView.subviews.forEach({ $0.removeFromSuperview() })
-        containerView.addSubview(newView)
-        containerView.bringSubviewToFront(newView)
+        
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.containerView.addSubview(newView)
+            self?.containerView.bringSubviewToFront(newView)
+        })
     }
     
     private func configUI() {

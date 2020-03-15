@@ -78,6 +78,7 @@ class ChartView: UIView {
         
         lineChartView.xAxis.gridColor = UIColor.white.withAlphaComponent(0.4)
         
+        /// Config general area for chart
         lineChartView.legend.enabled = false
         lineChartView.animate(xAxisDuration: 0.4, yAxisDuration: 0.4, easingOption: .easeInCubic)
         

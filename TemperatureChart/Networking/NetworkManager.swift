@@ -32,7 +32,7 @@ class NetworkManager {
                 return
             }
             
-            guard let url = URL(string: "https://app.tibber.com/v4/gql") else {
+            guard let url = URL(string: APIUrlString.dataUrlString) else {
                 errorCallback?("Something wrong happens")
                 return
             }
@@ -76,7 +76,7 @@ class NetworkManager {
             return
         }
         
-        guard let url = URL(string: "https://app.tibber.com/v4/login.credentials") else {
+        guard let url = URL(string: APIUrlString.credentialUrlString) else {
             errorCallback?("Something wrong happens")
             return
         }
